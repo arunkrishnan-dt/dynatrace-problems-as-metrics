@@ -1,4 +1,29 @@
-# Dynatrace Problems as Metrics extension
+# Dynatrace Problems as Metrics Extension
+
+Send your Dynatrace tenancy Problems as metrics to the tenancy. These new metric can then be used for dashboards.
+
+Metrics sent:
+
+Total Open Problems:
+- dtapi.problem.open.global
+- dtapi.problem.open.managementZone
+
+New Problems:
+- dtapi.problem.open.new.global
+- dtapi.problem.open.new.managementZone
+
+Problem Time to Repair:
+- dtapi.problem.ttr.global
+- dtapi.problem.ttr.managementZone
+
+Age of Oldest Problem.
+- dtapi.problem.open.oldest.age.global
+- dtapi.problem.open.oldest.age.managementZone
+
+Sample Dashboard:
+
+![Operations Centre](assets/dashboard_operations_centre.png)
+
 
 ## Requirements
 
@@ -9,7 +34,7 @@
 
 ### Configuration:
 
-For `problems.config`
+> For `problems.config`
 
 1. Tenancy URL
     - SaaS : `{your-environment-id}.live.dynatrace.com`
@@ -28,7 +53,7 @@ For `problems.config`
 
 Step 1: Clone this github repo to a suitable location on your computer/server 
 
-    `git clone https://github.com/arunkrishnan-dt/dynatrace-problems-as-metrics.git`
+    https://github.com/arunkrishnan-dt/dynatrace-problems-as-metrics.git
 
 Step 2: Update `problems.config` with `tenancy_url` and `api_token` string
 
@@ -41,17 +66,17 @@ Step 3: Setup Cron/Windows Task Scheduler to run the script every minute
 
 In Linux:
 
-    a. Open Crontab: `crontab -e`
+ a. Open Crontab: `crontab -e`
 
-    b. Enter line: `* * * * * python3 {dir_path}/dynatrace-problems-as-metrics/main.py` 
+ b. Enter line: `* * * * * python3 {dir_path}/dynatrace-problems-as-metrics/main.py` 
 
-    c. Save and exit
+ c. Save and exit
 
 Step 4: Confirm script sending data to Dynatrace tenancy
 
-    a. Metrics show in Dynatrace. Search for `dtapi.problem` in Dynatrace 'Metrics' view
+ a. Metrics show in Dynatrace. Search for `dtapi.problem` in Dynatrace 'Metrics' view
 
-    b. 'Operations centre' is available as a 'preset' dashboard in Dashboards
+ b. 'Operations centre' is available as a 'preset' dashboard in Dashboards
 
 <br/>
 
