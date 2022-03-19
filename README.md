@@ -121,9 +121,9 @@ dashboard = true        # POST example dashboard 'Operations Centre'. Value chan
 
 <br/>
 
-## License Calculation
+## License (DDU) Calculation
 
-Sum of all below:
+This extension consumes DDUs. Total DDU consumption will be sum of below:
 
 ### Problems_Open
 - Global = 4 x 60 min x 24 h x 365 days x 0.001 metric weight = 2106.4 DDUs/year
