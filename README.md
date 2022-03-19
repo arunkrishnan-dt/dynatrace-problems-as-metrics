@@ -16,7 +16,7 @@ Problem Time to Repair:
 - dtapi.problem.ttr.global
 - dtapi.problem.ttr.managementZone
 
-Age of Oldest Problem.
+Age of Oldest Problem:
 - dtapi.problem.open.oldest.age.global
 - dtapi.problem.open.oldest.age.managementZone
 
@@ -24,6 +24,7 @@ Sample Dashboard:
 
 ![Operations Centre](assets/dashboard_operations_centre.png)
 
+<br/>
 
 ## Requirements
 
