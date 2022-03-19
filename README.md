@@ -73,7 +73,7 @@ In Linux:
 
  c. Save and exit
 
-Step 4: Confirm script sending data to Dynatrace tenancy
+Step 4: Confirm script is sending data to Dynatrace tenancy
 
  a. Metrics show in Dynatrace. Search for `dtapi.problem` in Dynatrace 'Metrics' view
 
