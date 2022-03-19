@@ -83,7 +83,7 @@ Step 4: Confirm script sending data to Dynatrace tenancy
 
 ## Troubleshooting
 
-Logs are available at `dynatrace-problems-as-metrics/log/problems.log`
+Logs are available at `dynatrace-problems-as-metrics/logs/problems.log`
 
 Logging is set to 'INFO' level by default. Update to 'DEBUG' in `problems.config` (as shown below) to get more details.
 
