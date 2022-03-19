@@ -1,6 +1,6 @@
 # Dynatrace Problems as Metrics Extension
 
-Send your Dynatrace tenancy Problems as metrics to the tenancy. These new metric can then be used for dashboards.
+Send your Dynatrace tenancy Problems as metrics to the tenancy. These new metrics can then be used for dashboards.
 
 Metrics sent:
 
@@ -30,7 +30,7 @@ Sample Dashboard:
 
 ### Basic:
 
-1. Python 3.6+. Please see [Download Python](https://www.python.org/downloads/)
+1. Python 3.6+. [Download Python](https://www.python.org/downloads/)
 2. Python `requests` module. Install after completing step 1 by running `pip3 install requests`
 
 ### Configuration:
@@ -54,7 +54,7 @@ Sample Dashboard:
 
 Step 1: Clone this github repo to a suitable location on your computer/server 
 
-    https://github.com/arunkrishnan-dt/dynatrace-problems-as-metrics.git
+    git clone https://github.com/arunkrishnan-dt/dynatrace-problems-as-metrics.git
 
 Step 2: Update `problems.config` with `tenancy_url` and `api_token` string
 
@@ -77,7 +77,7 @@ Step 4: Confirm script sending data to Dynatrace tenancy
 
  a. Metrics show in Dynatrace. Search for `dtapi.problem` in Dynatrace 'Metrics' view
 
- b. 'Operations centre' is available as a 'preset' dashboard in Dashboards
+ b. 'Operations centre' available as a 'preset' dashboard in Dashboards
 
 <br/>
 
