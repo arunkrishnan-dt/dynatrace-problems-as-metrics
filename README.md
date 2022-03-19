@@ -129,11 +129,11 @@ Sum of all below:
 - Global = 4 x 60 min x 24 h x 365 days x 0.001 metric weight = 2106.4 DDUs/year
 - Management Zones = {Number of management zones} * 4 x 60 min x 24 h x 365 days x 0.001 metric weight DDUs/year
 
-### Problems_MTTR
+### Problems_New
 - Global = {Avg. number of daily problems - Global} x 365 days x 0.001 metric weight DDUs/year
 - Management Zones = {Avg. number of daily problems - Management Zone} x 365 days x 0.001 metric weight DDUs/year
 
-### Problems_New
+### Problems_MTTR
 - Global = {Avg. number of daily problems - Global} x 365 days x 0.001 metric weight DDUs/year
 - Management Zones = {Avg. number of daily problems - Management Zone} x 365 days x 0.001 metric weight DDUs/year
 
