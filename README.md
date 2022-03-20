@@ -30,7 +30,9 @@ Sample Dashboard:
 
 ### Basic:
 
-1. Python 3.6+. [Download Python](https://www.python.org/downloads/)
+1. Python 3.6+. 
+    - Linux (Centos7) - `sudo yum install python3`
+    - Windows - See [Download Python](https://www.python.org/downloads/)
 2. Python `requests` module. Install after completing step 1 by running `pip3 install requests`
 
 ### Configuration:
@@ -56,7 +58,7 @@ Step 1: Clone this github repo to a suitable location on your computer/server
 
     git clone https://github.com/arunkrishnan-dt/dynatrace-problems-as-metrics.git
 
-Step 2: Update `problems.config` with `tenancy_url` and `api_token` string
+Step 2: Update `dynatrace-problems-as-metrics/problems.config` with `tenancy_url` and `api_token` strings.
 
 ```
 [TENANCY_INFO]
@@ -67,11 +69,16 @@ Step 3: Setup Cron/Windows Task Scheduler to run the script every minute
 
 In Linux:
 
- a. Open Crontab: `crontab -e`
+ a. Make `main.py` executable by running `chmod +x {dir_path}/dynatrace-problems-as-metrics/main.py`
+ 
+ b. Open Crontab: `crontab -e`
 
- b. Enter line: `* * * * * python3 {dir_path}/dynatrace-problems-as-metrics/main.py` 
+ c. Enter line: `* * * * * python3 {dir_path}/dynatrace-problems-as-metrics/main.py` 
 
- c. Save and exit
+ d. Save and exit
+
+In Windows:
+-- To be added --
 
 Step 4: Confirm script is sending data to Dynatrace tenancy
 
