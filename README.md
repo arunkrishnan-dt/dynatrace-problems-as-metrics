@@ -67,24 +67,25 @@ api_token = dt0c01.xxxxxxx.xxxxxx
 ```
 Step 3: Setup Cron/Windows Task Scheduler to run the script every minute
 
-In Linux:
+Linux:
 
- a. Make `main.py` executable by running `chmod +x {dir_path}/dynatrace-problems-as-metrics/main.py`
+ 1. Make `main.py` executable by running `chmod +x {dir_path}/dynatrace-problems-as-metrics/main.py`
  
- b. Open Crontab: `crontab -e`
+ 2. Open Crontab: `crontab -e`
 
- c. Enter line: `* * * * * python3 {dir_path}/dynatrace-problems-as-metrics/main.py` 
+ 3. Enter line: `* * * * * python3 {dir_path}/dynatrace-problems-as-metrics/main.py` 
 
- d. Save and exit
+ 4. Save and exit
 
-In Windows:
+Windows:
+
 -- To be added --
 
 Step 4: Confirm script is sending data to Dynatrace tenancy
 
- a. Metrics show in Dynatrace. Search for `dtapi.problem` in Dynatrace 'Metrics' view
+ 1. Metrics show in Dynatrace. Search for `dtapi.problem` in Dynatrace 'Metrics' view
 
- b. 'Operations centre' available as a 'preset' dashboard in Dashboards
+ 2. 'Operations centre' available as a 'preset' dashboard in Dashboards
 
 <br/>
 
