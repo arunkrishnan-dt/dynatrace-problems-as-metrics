@@ -20,7 +20,7 @@ Age of Oldest Problem:
 - dtapi.problem.open.oldest.age.global
 - dtapi.problem.open.oldest.age.managementZone
 
-Sample Dashboard:
+Example Dashboard:
 
 ![Operations Centre](assets/dashboard_operations_centre.png)
 
