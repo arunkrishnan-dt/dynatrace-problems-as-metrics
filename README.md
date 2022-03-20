@@ -44,7 +44,7 @@ Sample Dashboard:
 
 2. API Token with below permissions:
    - Read Configuration (v1)
-   - Write Configuration (v1)
+   - Write Configuration (v1) - Required for Sample dashboard POST. Write Configuration permission can be removed after first run of script.
    - Read Problems (v2)
    - Ingest Metrics (v2)
 
