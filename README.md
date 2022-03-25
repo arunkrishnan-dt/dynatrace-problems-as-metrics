@@ -36,7 +36,9 @@ Sample Dashboard:
 
 ### Basic:
 
-1. Python 3.6+. [Download Python](https://www.python.org/downloads/)
+1. Python 3.6+. 
+    - Linux (Centos7) - `sudo yum install python3`
+    - Windows - See [Download Python](https://www.python.org/downloads/)
 2. Python `requests` module. Install after completing step 1 by running `pip3 install requests`
 
 ### Configuration:
@@ -62,7 +64,7 @@ Step 1: Clone this github repo to a suitable location on your computer/server
 
     git clone https://github.com/arunkrishnan-dt/dynatrace-problems-as-metrics.git
 
-Step 2: Update `problems.config` with `tenancy_url` and `api_token` string
+Step 2: Update `dynatrace-problems-as-metrics/problems.config` with `tenancy_url` and `api_token` strings.
 
 ```
 [TENANCY_INFO]
@@ -71,19 +73,25 @@ api_token = dt0c01.xxxxxxx.xxxxxx
 ```
 Step 3: Setup Cron/Windows Task Scheduler to run the script every minute
 
-In Linux:
+Linux:
 
- a. Open Crontab: `crontab -e`
+ 1. Make `main.py` executable by running `chmod +x {dir_path}/dynatrace-problems-as-metrics/main.py`
+ 
+ 2. Open Crontab: `crontab -e`
 
- b. Enter line: `* * * * * python3 {dir_path}/dynatrace-problems-as-metrics/main.py` 
+ 3. Enter line: `* * * * * python3 {dir_path}/dynatrace-problems-as-metrics/main.py` 
 
- c. Save and exit
+ 4. Save and exit
+
+Windows:
+
+-- To be added --
 
 Step 4: Confirm script is sending data to Dynatrace tenancy
 
- a. Metrics show in Dynatrace. Search for `dtapi.problem` in Dynatrace 'Metrics' view
+ 1. Metrics show in Dynatrace. Search for `dtapi.problem` in Dynatrace 'Metrics' view
 
- b. 'Operations centre' available as a 'preset' dashboard in Dashboards
+ 2. 'Operations centre' available as a 'preset' dashboard in Dashboards
 
 <br/>
 
