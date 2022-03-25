@@ -20,6 +20,12 @@ Age of Oldest Problem:
 - dtapi.problem.open.oldest.age.global
 - dtapi.problem.open.oldest.age.managementZone
 
+<br/>
+
+> NOTE: There is a 2 minute delay from when Problem appears in 'Problems' view and it showing on dashboard. This is due to delay with metric ingestion processing
+
+<br/>
+
 Sample Dashboard:
 
 ![Operations Centre](assets/dashboard_operations_centre.png)
