@@ -52,7 +52,7 @@ Sample Dashboard:
 
 2. API Token with below permissions:
    - Read Configuration (v1)
-   - Write Configuration (v1) - Required for Sample dashboard POST. Write Configuration permission can be removed after first run of script.
+   - Write Configuration (v1) - Required for Sample dashboard POST. Write Configuration permission can be removed after first run of script. Can skip this by setting `dashboard = false` in `problems.config`
    - Read Problems (v2)
    - Ingest Metrics (v2)
 
@@ -112,7 +112,7 @@ Please raise an issue in github repo if required.
 
 ## Configuration File
 
-Configuration file has below parameters
+Configuration file `problems.config` has below parameters
 
 ```
 [TENANCY_INFO]
