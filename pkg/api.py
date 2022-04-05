@@ -11,9 +11,9 @@ def get_problems(TENANCY_URL, API_TOKEN):
     "Authorization": "Api-Token "+API_TOKEN
     }
     try:
-        response = requests.request("GET", url, headers=headers, data=payload)
+        response = requests.request("GET", url, headers=headers, data=payload, timeout=10)
         response.raise_for_status()        
-    except requests.exceptions.HTTPError as err:
+    except requests.exceptions.RequestException as err:
         logger.error(err)
         raise SystemExit(err)
     logger.info("GET PROBLEMS :"+ str(response))
@@ -27,9 +27,9 @@ def get_management_zones(TENANCY_URL, API_TOKEN):
     "Authorization": "Api-Token "+API_TOKEN
     }
     try:
-        response = requests.request("GET", url, headers=headers, data=payload)
+        response = requests.request("GET", url, headers=headers, data=payload, timeout=10)
         response.raise_for_status()      
-    except requests.exceptions.HTTPError as err:
+    except requests.exceptions.RequestException as err:
         logger.error(err)
         raise SystemExit(err)
     logger.info("GET MANAGMENT ZONES :"+str(response))
@@ -48,9 +48,9 @@ def post_metric(TENANCY_URL, API_TOKEN, payload):
     logger.debug(payload) 
     if payload !="":
         try:
-            response = requests.request("POST", url, headers=headers, data=payload)
-            response.raise_for_status()        
-        except requests.exceptions.HTTPError as err:
+            response = requests.request("POST", url, headers=headers, data=payload, timeout=20)
+            response.raise_for_status()
+        except requests.exceptions.RequestException as err:
             logger.error(err)
             raise SystemExit(err)
         logger.info("POST METRIC :"+ str(response))
@@ -64,8 +64,11 @@ def post_dashboard(TENANCY_URL, API_TOKEN, payload):
     }
     try:
         response = requests.request("POST", url, headers=headers, data=json.dumps(payload))
-        response.raise_for_status()        
-    except requests.exceptions.HTTPError as err:
+        response.raise_for_status()
+    except requests.exceptions.HTTPError as httperror:
+        logger.error(httperror) 
+        pass # continue even if http error        
+    except requests.exceptions.RequestException as err:
         logger.error(err)
         raise SystemExit(err)
     logger.info(response.text)

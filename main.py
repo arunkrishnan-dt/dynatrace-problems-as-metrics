@@ -28,6 +28,8 @@ def main():
     config_file = Path(__file__).parent / "problems.config"
     config_obj.read(config_file)
     TENANCY_URL = config_obj["TENANCY_INFO"]["TENANCY_URL"]
+    if TENANCY_URL.startswith("https://"):
+        TENANCY_URL = TENANCY_URL.replace("https://","")
     API_TOKEN   = config_obj["TENANCY_INFO"]["API_TOKEN"]    
 
     # Encode Token
