@@ -52,7 +52,7 @@ Sample Dashboard:
 
 2. API Token with below permissions:
    - Read Configuration (v1)
-   - Write Configuration (v1) - Required for Sample dashboard POST. Write Configuration permission can be removed after first run of script. Can completly skip dashboard POST by setting `dashboard = false` in `problems.config`
+   - Write Configuration (v1) (Optional) - Required for Sample dashboard POST. Write Configuration permission can be removed after first run of script. Logs error and continues if permission not assigned. Can completly skip dashboard POST by setting `dashboard = false` in `problems.config`
    - Read Problems (v2)
    - Ingest Metrics (v2)
 
