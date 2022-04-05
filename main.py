@@ -30,6 +30,7 @@ def main():
     TENANCY_URL = config_obj["TENANCY_INFO"]["TENANCY_URL"]
     if TENANCY_URL.startswith("https://"):
         TENANCY_URL = TENANCY_URL.replace("https://","")
+        TENANCY_URL = TENANCY_URL.strip("/")
     API_TOKEN   = config_obj["TENANCY_INFO"]["API_TOKEN"]    
 
     # Encode Token
